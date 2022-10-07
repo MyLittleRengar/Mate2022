@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>학식메이트</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/changepassword.css?ver=2">
+        <link rel="shortcut icon" type="image/x-icon" href="images/icon2.jpg" />
+    </head>
+    <body>
+        <h1 align="center">신고</h1>
+        <hr>
+        <form action="/reportBoard" method="post" >
+            <div class="col-4 col-4-mobile">
+                <br><b class="name">신고자: <%=reporter%></b>
+                <input class="text" type="hidden" name="reporter" value= "<%=reporter %>">
+                <br><b class="name" style="margin-top: 20px;">신고 대상: <%=toreport%></b>
+                <input class="text" type="hidden" name="toreport" value= "<%=toreport %>"><br>
+                <br><b class="name" style="margin-top: 20px;">신고할 게시글: <%=reportContent%></b>
+                <input class="text" type="hidden" name="reportContent" value= "<%=reportContent %>"><br>
+                <textarea class="text" name="reportReason" placeholder="신고 사유를 입력해주세요" style="resize: none; height: 100px;margin-bottom: 20px;margin-top: 20px; font-weight: bold;"></textarea>
+            </div>
+            <div>
+                <button class="sign_up" type="submit"><b>신고</b></button>
+            </div>
+        </form>
+    </body>
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.scrolly.min.js?ver=2"></script>
+    <script src="js/jquery.scrollex.min.js"></script>
+    <script src="js/browser.min.js"></script>
+    <script src="js/breakpoints.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/main.js?ver=7"></script>
+</html>

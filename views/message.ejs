@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CHAT</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css?ver=31" />
+        <link rel="shortcut icon" type="image/x-icon" href="images/icon2.jpg" />
+    </head>
+    <body>
+        <div id="header">
+            <div class="top">
+                    <div id="logo">
+                        <span class="image avatar48"><a href="index"><img src="images/icon2.jpg"/></a></span>
+                        <h1 id="title">메인화면</h1>
+                    </div>
+            </div>
+        </div>
+        <div id="main">
+            <section id="Intro" class="one dark cover">
+                <div class="container">
+                    <header>
+                        <h2 class="alt" style="font-weight: bolder;"><strong style="color: black;font-weight: 900;">쪽지</strong></h2>
+                    </header>
+                </div>
+            </section>
+            <section class="main">
+                <div class="board">
+                    <table class="table table-striped">
+                        <thead class="thead">
+                            <tr>
+                                <th class="six">보낸이</th>
+                                <th class="six">받은이</th>
+                                <th class="seven">내용</th>
+                                <th class="four">작성일</th>
+                                <th class="eight">답장</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <% for(var i=0; i<rows.length; i++)  { %>
+                                    <tr style="background:#fff;">
+                                        <%if(rows[i].fromWriter == mynick){ %>
+                                            <th class="six">나</th>
+                                        <% } else {%>
+                                            <th class="six"><%=rows[i].fromWriter %></th>
+                                        <% } %>
+                                        <%if(rows[i].toWriter == mynick){ %>
+                                            <th class="six">나</th>
+                                        <% } else {%>
+                                            <th class="six"><%=rows[i].toWriter %></th>
+                                        <% } %>
+                                        <th class="seven"><%=rows[i].contents %></th>
+                                        <%if(datetime == rows[i].date) { %>
+                                            <th class="four">오늘</th>
+                                        <%} else if(datetime - rows[i].date == 1) {%>
+                                            <th class="four">어제</th>
+                                        <% } else{ %>
+                                            <th class="four"><%=rows[i].write_time.substr(0,11) %></th>
+                                        <% } %>
+                                        <th class="eight">
+                                            <div>
+                                                <% if(rows[i].toWriter == mynick) { %>
+                                                    <form action="/messageReply" method="post" >
+                                                        <input class="text" type="hidden" name="messValue" value= "<%=rows[i].write_time %>">
+                                                        <button type="submit" style="width: 75px; height:40px; padding-left: 25px; background-color: #FB7B8E; border-radius: 12px;"><b style="color: #fff;font-weight: 800;">답장</b></button>
+                                                    </form>
+                                                <% } %>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                <%}%>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </body>
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.scrolly.min.js?ver=1"></script>
+    <script src="js/jquery.scrollex.min.js"></script>
+    <script src="js/browser.min.js"></script>
+    <script src="js/breakpoints.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/main.js?ver=7"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    
+    <style>
+    .page-nation li{
+        list-style: none;
+    }
+    
+    .page-wrap {
+        text-align:center;
+        font-size:0;
+    }
+    
+    .page-nation  {
+        display: flex;justify-content: 
+        center;align-items: center;margin-top:20px;
+    }
+    
+    .page-nation a {
+        display:block;margin:0 3px;float:left;
+        border:1px solid #e6e6e6;
+        width:28px;
+        height:28px;
+        line-height:28px;
+        text-align:center;
+        background-color:#fff;font-size:13px;
+        color:black;text-decoration:none;
+        font-weight:bold;
+    }
+    
+    .page-nation a:hover{
+        background-color:gray;
+        color:white;
+    }
+    
+    td{
+        text-align: center;
+    }
+    th{
+        font-size:13px;
+        height: 45px;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        display:inline-block;
+    }
+
+    th.five{
+    width:30px;
+    }
+    th.six{
+    width:60px;
+    padding-left: 5px; 
+    }
+    th.seven{
+    width:100px;
+    }
+    th.four{
+    width:90px;
+    }
+    th.eight{
+    width:100px;
+    }
+    </style>
+</html>

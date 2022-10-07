@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Notice</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/main.css?ver=2" />
+        <link rel="shortcut icon" type="image/x-icon" href="/images/icon2.jpg" />
+    </head>
+    <body>
+        <!-- Header -->
+        <div id="header">
+            <div class="top">
+                <!-- Logo -->
+                <div id="logo">
+                    <span class="image avatar48"><a href="/index"><img src="/images/icon2.jpg" alt="" /></a></span>
+                    <h1 id="title">메인화면</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Main -->
+        <div id="main">
+            <!-- Intro -->
+            <section id="Intro" class="one dark cover">
+                <div class="container">
+                    <header>
+                        <h2 class="alt" style="font-weight: bolder;"><strong>공지 작성</strong></h2>
+                    </header>
+                </div>
+            </section>
+            <form action="/notice_write" method="post" class="post-form">
+                <table>
+                    <tr>
+                        <table>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td align="center">제목</td>
+                                <td><input size="50" maxlength="50" name="title" id="title"></td>
+                            </tr>
+                            <tr height="1" colspan="4"></tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td align="center">내용</td>
+                                <td><textarea type=text size="10" cols="30" rows="10" name="content" id="content" style="resize: none;"></textarea></td>
+                            </tr>
+                            <tr height="1" colspan="4"></tr>
+                            <tr align="center">
+                                <td>&nbsp;</td>
+                                <td colspan="2"><button class="sign_up" type="submit" style="background-color:#2A4C9F">등록</button></td>
+                            </tr>
+                        </table>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+
+    <style>
+    .page-nation li{list-style: none;}
+
+    .page-wrap {text-align:center;
+        font-size:0;}
+
+    .page-nation  {display: flex;justify-content: 
+        center;align-items: center;margin-top:20px;}
+
+    .page-nation a {display:block;margin:0 3px;float:left;
+        border:1px solid #e6e6e6;
+        width:28px;
+        height:28px;
+        line-height:28px;
+        text-align:center;
+        background-color:#fff;font-size:13px;
+        color:black;text-decoration:none;
+        font-weight:bold;}
+
+    .page-nation a:hover{background-color:gray;
+        color:white;}
+    .clearBothOnly {
+        clear: both !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        height: 0 !important;
+    }
+    ul{
+        list-style:none;
+        }
+    li{
+        list-style:none;
+    }
+    </style>
+</html>

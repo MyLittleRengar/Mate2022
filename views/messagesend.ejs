@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">       
+        <title>학식 MATE</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/message.css?ver=1">
+        <link rel="shortcut icon" type="image/x-icon" href="images/icon2.jpg" />
+    </head>
+    <body>
+        <section class="h_message">
+            <div class="container">
+                <h1>쪽지 보내기</h1>
+                <div class="l_t">
+                    <form action="/messagePass" method="post" >
+                        <div class="form-group">
+                            <br><b class="name">보내는 분: <%=from%></b>
+                            <input class="l_input" type="hidden" name="from" value= "<%=from %>">
+                            <br><b class="name" style="margin-top: 20px;">받는 분: <%=to%></b>
+                            <input class="l_input" type="hidden" name="to" value= "<%=to %>"><br>
+                            <textarea name="messageContent" placeholder="쪽지 내용을 입력해주세요" style="resize: none; height: 100px;margin-bottom: 20px;margin-top: 20px; font-weight: bold;"></textarea>
+                        </div>
+                        <button class="send-btn" type="submit">쪽지 보내기</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Board</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css?ver=18" />
+        <link rel="shortcut icon" type="image/x-icon" href="images/icon2.jpg" />
+    </head>
+    <body>
+        <!-- Header -->
+        <div id="header">
+            <div class="top">
+                <!-- Logo -->
+                <div id="logo">
+                    <span class="image avatar48"><a href="/index"><img src="/images/icon2.jpg" alt="" /></a></span>
+                    <h1 id="title">메인화면</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main -->
+        <div id="main">
+            <!-- Intro -->
+            <section id="Intro" class="one dark cover">
+                <div class="container">
+                    <header>
+                        <h2 class="alt" style="font-weight: bolder;"><strong>게시판 글쓰기</strong></h2>
+                    </header>
+                </div>
+            </section>
+            <form action="/board_write" method="post" class="post-form">
+                <table class="col-12 col-12-mobile" style="margin-left: 4px;margin-top:40px;">
+                    <tr style="background:#fff;">
+                        <td class="one">&nbsp;</td>
+                        <td align="center" style="padding-right: 10px;">제목</td>
+                        <th>
+                            <input class="inputmenu" size="5" maxlength="10" name="hourTitle" placeholder="시" style="font-size:12px;margin-left:-5px;" ><b style="padding-right: 4px;">시 </b>
+                            <input class="inputmenu" size="5" maxlength="10" name="minTitle" placeholder="분" style="font-size:12px;" ><b style="padding-right: 4px;">분에 </b>
+                            <input class="inputmenu" size="5" maxlength="10" name="placeTitle" placeholder="장소" style="font-size:12px;"><b style="padding-right: 4px;">에서(로) </b>
+                        </th>
+                    </tr>
+                    <tr height="1" td colspan="4"></tr>
+                    <tr style="background:#fff;">
+                        <td class="one">&nbsp;</td>
+                        <td  align="center"style="padding-right: 10px;">내용</td>
+                        <th> 
+                            <input class="inputmenu" size="5" maxlength="10" name="foodTitle" placeholder="음식" style="font-size:12px;margin-left:-5px;"><b style="padding-right: 4px;">을(를) 먹을 </b>
+                            <input class="inputmenu" size="5" maxlength="10" name="countTitle" placeholder="명" style="font-size:12px;"><b style="padding-right: 4px;">명을(를) 구합니다.</b>
+                        </th>
+                    </tr>
+                    <tr height="1" colspan="4"></tr>
+                    <tr calign="center">
+                        <td class="one">&nbsp;</td>
+                        <td colspan="2" style="text-align:center;"><button class="sign_up" type="submit"style="padding: 0rem 0rem 0rem 0rem;margin-top:8px;">등록</button></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.scrolly.min.js?ver=1"></script>
+    <script src="js/jquery.scrollex.min.js"></script>
+    <script src="js/browser.min.js"></script>
+    <script src="js/breakpoints.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/main.js?ver=7"></script>
+
+    <style>
+    .inputmenu {
+        height: 30px;
+        width: 60px;
+        border: #000 1px solid;
+        font-weight: 450;
+    }
+
+    .page-nation li{list-style: none;}
+
+    .page-wrap {text-align:center;
+        font-size:0;}
+
+    .page-nation  {display: flex;justify-content: 
+        center;align-items: center;margin-top:20px;}
+
+    .page-nation a {display:block;margin:0 3px;float:left;
+        border:1px solid #e6e6e6;
+        width:28px;
+        height:28px;
+        line-height:28px;
+        text-align:center;
+        background-color:#fff;font-size:13px;
+        color:black;text-decoration:none;
+        font-weight:bold;}
+
+    .page-nation a:hover{background-color:gray;
+        color:white;}
+        
+    .clearBothOnly {
+        clear: both !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        height: 0 !important;
+    }
+    ul{
+        list-style:none;
+        }
+    li{
+        list-style:none;
+    }
+    #container > div.main > article form.writecomment {
+        position: relative; border-top: 1px solid #e3e3e3; background-color: #f8f8f8;
+    }
+    table{
+        width:400px;
+        font-size:16px;
+        height: 170px;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        display:inline-block;
+    }
+    th{
+        font-size:16px;
+        height: 45px;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        display:inline-block;
+    }
+    table tr th{
+        background:#fff;
+    }
+    td.one{
+        font-size: 0.5px;
+    }
+
+    </style>
+</html>
+

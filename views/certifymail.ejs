@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>학식메이트</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/certify.css?ver=2">
+        <link rel="shortcut icon" type="image/x-icon" href="images/icon2.jpg" />
+    </head>
+    <body>
+        <h1 align="center">메일 인증</h1>
+        <hr>
+        <form action="/certifyNum" method="post" >
+            <div>
+                <b class="name">이름: <%=name%></b>
+                <br><b class="name">이메일: <%=email%></b><br>
+                <input class="text" type="hidden" name="certifyValue" value= "<%=email %>">
+                <button class="certify" type="submit"><b>인증번호 전송</b></button>
+            </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">       
+        <title>학식 MATE</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/message.css?ver=1">
+        <link rel="shortcut icon" type="image/x-icon" href="images/icon2.jpg" />
+    </head>
+    <body>
+        <section class="h_message">
+            <div class="container">
+                <h1>쪽지 답장</h1>
+                <div class="l_t">
+                    <form action="/messagePass2" method="post" >
+                        <div class="form-group">
+                            <br><b class="name">보내는 분: <%=from%></b>
+                            <input class="l_input" type="hidden" name="from" value= "<%=from %>">
+                            <br><b class="name" style="margin-top: 20px;">받는 분: <%=to%></b>
+                            <input class="l_input" type="hidden" name="to" value= "<%=to %>"><br>
+                            <br><b class="name" style="margin-top: 20px;">받은 내용</b>
+                            <br><b class="name" ><%=mesContent%></b><br>
+                            <textarea class="text" name="mesContent" placeholder="쪽지 답장을 입력해주세요" style="resize: none; height: 120px;width: 200px;margin-bottom: 20px;margin-top: 19px; font-weight: bold;margin-left: 10px;"></textarea>
+                        </div>
+                        <button class="send-btn" type="submit">쪽지 답장</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>학식메이트</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css?ver=35" />
+        <link rel="shortcut icon" type="image/x-icon" href="images/icon2.jpg" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="top">
+                    <div id="logo">
+                        <span class="image avatar48"><a href="index"><img src="images/icon2.jpg" alt="" /></a></span>
+                        <h1 id="title">문의함</h1>
+                    </div>
+            </div>
+        </div>
+        <div id="main">
+            <section id="Intro" class="one dark cover">
+                <div class="container">
+                    <header>
+                        <h2 class="alt" style="font-weight: bolder;"><strong style="color: black;font-weight: 900;">문의함</strong></h2>
+                    </header>
+                </div>
+            </section>
+            <section class="main">
+                <div class="board">
+                    <table class="table table-striped" >
+                        <thead class="thead">
+                            <tr>
+                                <th class="one">번호</th>
+                                <th class="nine">제목</th>
+                                <th class="seven">내용</th>
+                                <th class="five">답변 여부</th>
+                                <th class="seven">답변</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <% for(var i=0; i<rows.length; i++)  { %>
+                                    <tr style="background:#fff;">
+                                        <th class="one"><%=i+1 %></th>
+                                        <th class="nine"><%=rows[i].ititle %></th>
+                                        <th class="seven"><%=rows[i].icontent %></th>
+                                        <% if(rows[i].answer == '1') { %>
+                                            <th class="five"><i class="fa-solid fa-o"></i></th>
+                                        <% } else { %>
+                                            <th class="five"><i class="fa-solid fa-x"></i></th>
+                                        <% } %>
+                                        <% if(rows[i].answer == '1') { %>
+                                            <th class="seven"><%=rows[i].icomment %></th>
+                                        <% } else { %>
+                                            <th class="seven"> </th>
+                                        <% } %>
+                                    </tr>
+                                <%}%>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </body>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <style>
+    .page-nation li{
+        list-style: none;
+    }
+    
+    .page-wrap {
+        text-align:center;
+        font-size:0;
+    }
+    
+    .page-nation  {
+        display: flex;justify-content: 
+        center;align-items: center;margin-top:20px;
+    }
+    
+    .page-nation a {
+        display:block;margin:0 3px;float:left;
+        border:1px solid #e6e6e6;
+        width:28px;
+        height:28px;
+        line-height:28px;
+        text-align:center;
+        background-color:#fff;font-size:13px;
+        color:black;text-decoration:none;
+        font-weight:bold;
+    }
+    
+    .page-nation a:hover{
+        background-color:gray;
+        color:white;
+    }
+    
+    td{
+        text-align: center;
+    }
+    th{
+        font-size:13px;
+        height: 45px;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        display:inline-block;
+    }
+    th.one{
+        width:30px;
+    }
+    th.nine{
+        width:80px;
+    }
+    th.four{
+        width:120px;
+    }
+    th.five{
+        width:60px;
+    }
+    th.seven{
+        width:110px;
+    }
+    table{
+        width:400px;
+        margin-left:5px;
+    }
+
+    </style>
+</html>

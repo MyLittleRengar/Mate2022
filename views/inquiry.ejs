@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">       
+        <title>문의하기</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/inquiry.css?ver=1">
+        <link rel="shortcut icon" type="image/x-icon" href="images/icon2.jpg" />
+    </head>
+    <body>
+        <section class="h_inquiry">
+            <div class="container">
+                <h1>학식메이트 개인문의</h1>
+                <div class="l_t">
+                    <form action="/inquiry" method="post" >
+                        <div class="form-group">
+                            <b class="name">이름: <%=name %></b><br>
+                            <b class="name">이메일: <%=email %></b><br>
+                            <b class="name">문의 시간: <%=time %></b><br><HR>
+                            <b class="name">문의 제목</b><br>
+                            <input class="text" type="text" name="intitle" placeholder="제목"><br><br>
+                            <b class="name">문의 내용</b><br>
+                            <textarea class="content" type="text" name="incon" placeholder="내용"></textarea><br><br>
+                        </div>
+                        <button class="inquiry-btn" type="submit">완료</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

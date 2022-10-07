@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Board</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/main.css?ver=48" />
+        <link rel="shortcut icon" type="image/x-icon" href="images/icon2.jpg" />
+    </head>
+    <body>
+        <!-- Header -->
+        <div id="header">
+            <div class="top">
+                <!-- Logo -->
+                <div id="logo">
+                    <span class="image avatar48"><a href="/index"><img src="images/icon2.jpg"></a></span>
+                    <h1 id="title">메인화면</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Main -->
+        <div id="main">
+            <!-- Intro -->
+            <section id="Intro" class="one dark cover">
+                <div class="container">
+                    <header>
+                        <a href="board_list"><h2 class="alt" style="font-weight: bolder;"><strong style="color: black;font-weight: 900;">게시글</strong></h2></a>
+                    </header>
+                </div>
+            </section>
+        </div>
+        <div style="position: relative; left: 10px; top: 10px; width:95%; height:100%; object-fit:contain; justify-content : center;">
+        <section class="main" style="margin-bottom:8%;">
+            <h2 class="d-none">
+                <div box>
+                <form action="/boardSearch" method="get" class="post-form" style="margin:0;display:inline;">
+                    <input type="text" name="searchText" id="searchText" placeholder="검색어를 입력하세요" style="width:250px;height:40px;font-size:15px;float:left;margin-top:9px; margin-left: 20px;">
+                    <button style="margin-left:20px;margin-top: 9px;">검색</button>
+                </form>
+                </div>
+            </h2>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col" width="100%" style="margin:-1px;">
+                    <table class="col-12 col-12-mobile">
+                        <thead class="thead">
+                            <tr>
+                                <th class="one">번호</th>
+                                <th class="two">제목</th>
+                                <th class="three">글쓴이</th>
+                                <th class="four">작성일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for(var i = noRows.length-1; i>=0; i--){%>
+                                <tr>
+                                    <th class="one">공지</th>
+                                    <th class="two"><a href="/detail/<%=noRows[i].listNum %>"><%=noRows[i].title %></a></th>
+                                    <th class="three"><%=noRows[i].writer %></th>
+                                    <%if(datetime == noRows[i].date) { %>
+                                        <th class="four">오늘</th>
+                                    <%} else if(datetime - noRows[i].date == 1) {%>
+                                        <th class="four">어제</th>
+                                    <% } else{ %>
+                                        <th class="four"><%=noRows[i].writeTime.substr(0,11) %></th>
+                                    <% } %>
+                                </tr>
+                            <%}%>
+                            <% for(var i = boRows.length-1; i>=0; i--){%>
+                                <tr>
+                                    <th class="one"><%=i+1 %></th>
+                                    <th class="two"><a href="/detail/<%=boRows[i].listNum %>"><%=boRows[i].title %></a></th>
+                                    <th class="three"><%=boRows[i].writer %></th>
+                                    <%if(datetime == boRows[i].date) { %>
+                                        <th class="four">오늘</th>
+                                    <%} else if(datetime - boRows[i].date == 1) {%>
+                                        <th class="four">어제</th>
+                                    <% } else{ %>
+                                        <th class="four"><%=boRows[i].writeTime.substr(0,11) %></th>
+                                    <% } %>
+                                </tr>
+                            <%}%>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="headerToggle">
+                    <a class="writebutton" href='board_write'><img src="images/글쓰기버튼.jpg" width="50" height="50" alt=""></a>
+                </div>
+            </div>
+        </section>
+    </body>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.scrolly.min.js?ver=1"></script>
+    <script src="js/jquery.scrollex.min.js"></script>
+    <script src="js/browser.min.js"></script>
+    <script src="js/breakpoints.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/main.js?ver=7"></script>
+
+    <style>
+    .page-nation li{list-style: none;}
+
+    .page-wrap {text-align:center;
+        font-size:0;}
+
+    .page-nation  {display: flex;justify-content: 
+        center;align-items: center;margin-top:20px;}
+
+    .page-nation a {display:block;margin:0 3px;float:left;
+        border:1px solid #e6e6e6;
+        width:28px;
+        height:28px;
+        line-height:28px;
+        text-align:center;
+        background-color:#fff;font-size:13px;
+        color:black;text-decoration:none;
+        font-weight:bold;}
+
+    .page-nation a:hover{background-color:gray;
+        color:white;}
+
+    td{
+        text-align: center;
+    }
+    button{
+        height: 40px;
+        font-size: 15px; padding:10px 25px;
+        text-align: left;
+        background-color:#2A4C9F;
+    }
+    form {
+        display: inline-block;
+    }
+    tbody{
+        font-size: 13px;
+    }
+    th{
+        font-size:16px;
+        height: 45px;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        display:inline-block;
+    }
+    th.one{
+        width:65px;
+    }
+    th.two{
+        width:150px;
+    }
+    th.three{
+        width:80px;
+    }
+    th.four{
+        width:92.5px;
+    }
+
+    
+	a {
+		outline: none;
+		border:none;
+	}
+    a.writebutton {
+        position: fixed;
+        top: 800px;
+        left: 350px;
+        opacity:0.7;
+    }
+    </style>
+</html>

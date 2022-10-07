@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>음식 리스트</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/main.css?ver=17" />
+	<link rel="shortcut icon" type="image/x-icon" href="/images/icon2.jpg" />
+</head>
+<html>
+	<body class="is-preload">
+		<div id="header">
+			<div class="top">
+				<div id="logo">                            
+					<span class="image avatar48"> <a href="index"><img src="/images/icon2.jpg" alt="" /></a></span>
+					<h1 id="title">메인화면</h1>
+				</div>
+			</div>
+		</div>
+		<div id="main">
+			<section id="Intro" class="one dark cover">
+				<div class="container">
+					<header>
+						<h2 class="alt" style="font-weight: bolder;"><strong style="color: black;font-weight: 900;">음식리스트</strong></h2>
+					</header>
+				</div>
+			</section>
+			<section id="board" class="three">
+				<div class="container">
+					<header>
+						<h2><%=food%>리스트</h2>
+					</header>
+					<div class="board">
+						<div class="col-50-mobile">
+							<table class="table">
+								<tbody style="background:#fff;">
+									<tr>
+										<% for(var i = 0; i < rows.length; i++) { %>
+										<tr>
+											<td>
+												<div>
+													<form action="/foodDetail" method="post" >
+														<input type="hidden" name="foodValue1" value="<%=rows[i].restaurant %>" style="color: #888;">
+														<input type="hidden" name="foodValue2" value="<%=rows[i].menu %>" style="color: #888;">
+														<button style="background-color: #fff; background-image: none; color: #888 !important; font-size: .9em; padding: 0 0 0 0;font-weight: bold;"><%=rows[i].restaurant %></button>
+													</form>
+												</div>
+											</td>
+											<td style="color: #888;" ><%=rows[i].menu %></td>
+											<td style="color: #888;"><%=rows[i].price %></td>
+										</tr>
+										<%}%> 
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		</div>
+	</body>
+	<!-- Scripts -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.scrolly.min.js?ver=1"></script>
+	<script src="js/jquery.scrollex.min.js"></script>
+	<script src="js/browser.min.js"></script>
+	<script src="js/breakpoints.min.js"></script>
+	<script src="js/util.js"></script>
+	<script src="js/main.js?ver=7"></script>
+	<style> 
+		table{
+        	width:380px;
+        	font-size: 13px;
+        	overflow:hidden; 
+        	text-overflow:ellipsis;
+			white-space:pre;
+        }
+	</style>
+		<!-- overflow:hidden/ 글자수 제한 + text-overflwo:ellipsis/...표시 +  -->
+</html>

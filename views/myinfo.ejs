@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>학식메이트</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/css/main.css?ver=2" />
+		<link rel="shortcut icon" type="image/x-icon" href="images/icon2.jpg" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+				<div class="top">
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="images/icon2.jpg" alt="" /></span>
+							<a href="index"><h1 id="title">내 정보</h1></a>
+						</div>
+						<nav id="nav">
+							<ul style="text-align: left;">
+								<div class="infobox">
+									<li><a id="top-link"><span style="font-weight: bold;">아이디: <%=id %></span></a></li>
+									<li><a id="top-link"><span style="font-weight: bold;">이름: <%=name %></span></a></li>
+									<li><a id="top-link"><span style="font-weight: bold;">닉네임: <%=nickname %></span></a></li>
+									<li><a id="top-link"><span style="font-weight: bold;">이메일: <%=email %></span></a></li>
+								</div>
+							</ul>
+						</nav>
+				</div>
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+				<!-- Intro -->
+					<section id="Intro" class="one dark cover">
+						<div class="container">
+							<header>
+								<a href="index"><h2 class="alt"><strong style="font-weight: 900;">학식메이트</strong></h2></a>
+							</header>
+						</div>
+					</section>
+					<!-- 계정 -->
+					<section id="board" class="three" style="text-align: left; padding:4em; padding-top: 1em; padding-bottom: 1em;">
+						<div class="container">
+							<header>
+								<h2 style="text-align: center; font-weight: 750;font-size: 30px;">계정</h2>
+							</header>
+							<div>
+								<div class="col-4 col-12-mobile">
+									<article>
+										<a href="changenick" id="top-link"><h3><li style="font-weight: 350;font-size: 24px;">닉네임 변경</li></h3></a>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article>
+										<a href="changeemail" id="top-link"><h3><li style="font-weight: 350;font-size: 24px;">이메일 변경</li></h3></a>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article>
+										<a href="checkpassword" id="top-link"><h3><li style="font-weight: 350;font-size: 24px;">비밀번호 변경</li></h3></a>
+									</article>
+								</div>
+						</div>
+					</section>
+					<!--약관-->
+					<section id="board" class="two"style="text-align: left; padding:4em; padding-top: 1em; padding-bottom: 1em;">
+						<div class="container">
+							<header>
+								<h2 style="text-align: center; font-weight: 750;font-size: 30px;">이용 안내</h2>
+							</header>
+							<div>
+								<div class="col-4 col-12-mobile">
+									<article>
+										<a id="top-link"><h3><li style="font-weight: 350;font-size: 24px;">앱 버전: <strong style="font-weight: 900; font-size: 120%;" > 1.0.0</strong></li></h3></a>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article>
+										<a href="checkprivacy" id="top-link"><h3><li style="font-weight: 350;font-size: 24px;">서비스 이용약관</li></h3></a>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article>
+										<a href="checkterm" id="top-link"><h3><li style="font-weight: 350;font-size: 24px;">개인정보 이용약관</li></h3></a>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article>
+										<a href="inquiry" id="top-link"><h3><li style="font-weight: 350;font-size: 24px;">문의</li></h3></a>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article>
+										<a href="inquirylist" id="top-link"><h3><li style="font-weight: 350;font-size: 24px;">문의내역</li></h3></a>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article>
+										<a href="FAQ" id="top-link"><h3><li style="font-weight: 350;font-size: 24px;">FAQ</li></h3></a>
+									</article>
+								</div>
+						</div>
+					</section>
+					<!--기타-->
+					<section id="board" class="three" style="text-align: left; padding:4em; padding-top: 1em; padding-bottom: 1em;">
+						<div class="container">
+							<header>
+								<h2 style="text-align: center; font-weight: 750;font-size: 30px;">기타</h2>
+							</header>
+							<div>
+								<div class="col-4 col-12-mobile">
+									<article>
+										<a href="logout" id="top-link"><h3><li style="font-weight: 350;font-size: 24px;">로그아웃</li></h3></a>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article>
+										<a href="unregister" id="top-link"><h3><li style="font-weight: 350;font-size: 24px;">회원탈퇴</li></h3></a>
+									</article>
+								</div>
+						</div>
+					</section>
+			</div>
+
+		<!-- Scripts -->
+			<script src="js/jquery.min.js"></script>
+			<script src="js/jquery.scrolly.min.js"></script>
+			<script src="js/jquery.scrollex.min.js"></script>
+			<script src="js/browser.min.js"></script>
+			<script src="js/breakpoints.min.js"></script>
+			<script src="js/util.js"></script>
+			<script src="js/myinfo.js?ver=1"></script>
+	</body>
+</html>
