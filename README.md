@@ -4,9 +4,9 @@ Server: Nodejs + Express<br>
 DataBase: Mysql<br>
 Module: body-parser, cookie-parser, crypto, express, express-session, express-status-monitor, mysql, nodemailer, nodemon
 <hr>
-0823
-로그인 화면
-체크박스
+0823<br>
+로그인 화면<br>
+체크박스<br>
 ----------------------------------------------<br>
 0824<br>
 글쓰기 기능 추가<br>
