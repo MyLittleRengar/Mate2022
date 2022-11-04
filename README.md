@@ -4,6 +4,7 @@ Server: Nodejs + Express<br>
 DataBase: Mysql<br>
 Module: body-parser, cookie-parser, crypto, express, express-session, express-status-monitor, mysql, nodemailer, nodemon
 <hr>
+----------------------------------------------<br>
 0823<br>
 로그인 화면<br>
 체크박스<br>
@@ -65,3 +66,4 @@ FAQ 내용 추가<br>
 ----------------------------------------------<br>
 0922<br>
 게시글, 쪽지 시간 형식 변경<br>
+----------------------------------------------<br>
