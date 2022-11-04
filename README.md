@@ -5,6 +5,16 @@ DataBase: Mysql<br>
 Module: body-parser, cookie-parser, crypto, express, express-session, express-status-monitor, mysql, nodemailer, nodemon
 <hr>
 --------------------------------------------------------------------<br>
+0329 ~ 0630<br>
+주제 선정<br>
+UI 구상<br>
+DB 구축<br>
+서버 구축<br>
+메인 컬러 선정<br>
+--------------------------------------------------------------------<br>
+0701 ~ 0812<br>
+구축된 DB 데이터 삽입, 구조 <br>
+--------------------------------------------------------------------<br>
 0823<br>
 로그인 화면<br>
 체크박스<br>
